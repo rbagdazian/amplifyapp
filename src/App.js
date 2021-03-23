@@ -1,19 +1,26 @@
 
-//import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
-//import {API} from 'aws-amplify'
+import {API} from 'aws-amplify'
 
 
 function App() {
-  //const [timev, setTimev] = useState('');
+  const [timev, setTimev] = useState('');
+  
+  async function fetchTime() {
+    console.log('in fetch time')
+    const timeData = await API.get('lambdaTestApi','/time')
+    console.log(timeData)
+    console.log(timeData.timev)
+    setTimev(timeData.timev)
+  }
   
   
-  //  useEffect(() => {
-  // Update the document title using the browser API
-  // setTimev(API.get('lambdaTestApi','/time'))
-  //  }, []);
+  useEffect(() => {
+    fetchTime()
+    }, [])
   
   
   return (
@@ -22,7 +29,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h1>We now have Auth!</h1>
         <p>
-        <h3>The current time is: (-todo-)</h3>
+        <h3>The current time is: {timev} </h3>
         </p>
       </header>
       <AmplifySignOut />
