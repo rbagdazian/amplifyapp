@@ -1,0 +1,38 @@
+{
+    "paths": [
+        {
+            "name": "/time",
+            "lambdaFunction": "lambdaTestFunction",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/GET"
+                ]
+            },
+            "policyResourceName": "/time"
+        }
+    ],
+    "resourceName": "lambdaTestApi",
+    "apiName": "lambdaTestApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "lambdaTestFunction"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "amplify-amplifye25657fcada84-staging-130520-authRole",
+        "unAuthRoleName": "amplify-amplifye25657fcada84-staging-130520-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "lambdaTestFunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
