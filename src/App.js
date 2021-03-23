@@ -22,7 +22,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h1>We now have Auth!</h1>
         <p>
-        <h3>The current time is: (todo)</h3>
+        <h3>The current time is: (-todo-)</h3>
         </p>
       </header>
       <AmplifySignOut />
