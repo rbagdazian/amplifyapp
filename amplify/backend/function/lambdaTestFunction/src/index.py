@@ -7,7 +7,7 @@ def handler(event, context):
   #print(event)
   tvd = time.time()
   jse = json.JSONEncoder()
-  tv = '-> ' + jse.encode(tvd) + ' <-'
+  tv = '->' + jse.encode(tvd) + '<-'
   
   return {
       'statusCode': 200,
