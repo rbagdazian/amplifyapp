@@ -10,10 +10,10 @@ function App() {
   const [timev, setTimev] = useState('');
   
   async function fetchTime() {
-    console.log('in fetch time')
+    //console.log('in fetch time')
     const timeData = await API.get('lambdaTestApi','/time')
-    console.log(timeData)
-    console.log(timeData.timev)
+    //console.log(timeData)
+    //console.log(timeData.timev)
     setTimev(timeData.timev)
   }
   
