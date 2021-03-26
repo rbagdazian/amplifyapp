@@ -18,11 +18,11 @@
       "function": {
         "lambdaTestFunction": {
           "deploymentBucketName": "amplify-amplifye25657fcada84-staging-130520-deployment",
-          "s3Key": "amplify-builds/lambdaTestFunction-6a726c5368522f4a6763-build.zip"
+          "s3Key": "amplify-builds/lambdaTestFunction-696330776851686e3954-build.zip"
         },
         "imgProcessFcn": {
           "deploymentBucketName": "amplify-amplifye25657fcada84-staging-130520-deployment",
-          "s3Key": "amplify-builds/imgProcessFcn-55704b4d52307432624e-build.zip"
+          "s3Key": "amplify-builds/imgProcessFcn-4d374157385533353463-build.zip"
         }
       }
     }

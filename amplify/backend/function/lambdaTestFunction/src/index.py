@@ -5,6 +5,7 @@ import time
 def handler(event, context):
   #print('received event:')
   #print(event)
+  print("context is:",context)
   tvd = time.time()
   jse = json.JSONEncoder()
   tv = '->' + jse.encode(tvd) + '<-'
