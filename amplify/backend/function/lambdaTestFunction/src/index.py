@@ -3,8 +3,8 @@ import time
 
 
 def handler(event, context):
-  #print('received event:')
-  #print(event)
+  print('received event:')
+  print(event)
   print("context is:",context)
   tvd = time.time()
   jse = json.JSONEncoder()
@@ -18,7 +18,7 @@ def handler(event, context):
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
       },
-      'body': json.dumps({'timev': tv})
+      'body': json.dumps({'timev': context})
   }
   
   
