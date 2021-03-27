@@ -11,11 +11,7 @@ function App() {
   const [msg2, setMsg2] = useState('')
   
   async function fetchTime() {
-    //console.log('in fetch time')
     const timeData = await API.get('lambdaTestApi','/time')
-    //console.log(timeData)
-    console.log('t--->'+timeData.timev+'<---')
-    console.log('m--->'+timeData.msg2+'<---')
     setTimev(timeData.timev)
     setMsg2(timeData.msg2)
   }
