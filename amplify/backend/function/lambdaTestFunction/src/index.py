@@ -7,8 +7,9 @@ def handler(event, context):
   jse = json.JSONEncoder()
   tv = '->' + jse.encode(tvd) + '<-'
   keyarray1 = ''
-  valarray1 = ''
+  keylist=[]
   for key in event.keys():
+    keylist.append(key)
     if(key.lower() == 'path'):
       keyarray1 += (key+' : ') + (str(event[key])+'\n')
 
@@ -20,7 +21,7 @@ def handler(event, context):
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
       },
-      'body': json.dumps({'timev': keyarray1, 'msg2': '--'})
+      'body': json.dumps({'path': keyarray1, 'eventkeys': keylist})
   }
   
   
