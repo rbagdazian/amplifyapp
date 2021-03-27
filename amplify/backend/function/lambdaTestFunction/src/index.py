@@ -8,12 +8,7 @@ def handler(event, context):
   tv = '->' + jse.encode(tvd) + '<-'
   keyarray1 = ''
   keyarray2 = ''
-  keys = event.keys()
-  vals = event.values()
-  for i in keys:
-    keyarray1 = keyarray1 + (i + ' ')
-  for i in vals:
-    keyarray2 = keyarray2 + (i + ' ')
+
   
   return {
       'statusCode': 200,
