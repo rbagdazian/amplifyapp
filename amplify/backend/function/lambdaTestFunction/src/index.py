@@ -9,11 +9,14 @@ def handler(event, context):
   tvd = time.time()
   jse = json.JSONEncoder()
   tv = '->' + jse.encode(tvd) + '<-'
-  keyarray = ''
+  keyarray1 = ''
+  keyarray2 = ''
   keys = event.keys()
   vals = event.values()
-  for i in range(0,len(keys)):
-    keyarray = keyarray + ' [ ' + keys[i] + ', ' + vals[i] +' ] '
+  for i in keys:
+    keyarray1 = keyarray1 + i + ' '
+  for i in vals:
+    keyarray2 = keyarray2 + i + ' '
   
   return {
       'statusCode': 200,
@@ -23,7 +26,7 @@ def handler(event, context):
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
       },
-      'body': json.dumps({'timev': keyarray})
+      'body': json.dumps({'timev': keyarray1, 'msg2': keyarray2})
   }
   
   
