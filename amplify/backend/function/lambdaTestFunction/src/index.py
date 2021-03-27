@@ -10,8 +10,8 @@ def handler(event, context):
   valarray1 = ''
   for key in event.keys():
     keyarray1 += (key+' ')
-  for val in event.values():
-    valarray1 += (val+' ')
+  for key in event.keys():
+    valarray1 += (event[key]+' ')
   
   return {
       'statusCode': 200,
