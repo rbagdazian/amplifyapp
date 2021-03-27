@@ -30,7 +30,9 @@ function App() {
         <p>
         <h4>The current path is: {path} </h4>
         <h4>message2</h4>
-        <ul>{evkeys}</ul>
+        <ul>
+        <li>{evkeys}</li>
+        </ul>
         </p>
       </header>
       <AmplifySignOut />
