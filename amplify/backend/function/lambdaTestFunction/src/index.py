@@ -23,7 +23,7 @@ def handler(event, context):
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
       },
-      'body': json.dumps({'timev': keyarray1, 'msg2': keyarray2})
+      'body': json.dumps({'timev': "ok to here"})
   }
   
   
