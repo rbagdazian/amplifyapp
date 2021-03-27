@@ -7,10 +7,11 @@ def handler(event, context):
   jse = json.JSONEncoder()
   tv = '->' + jse.encode(tvd) + '<-'
   keyarray1 = ''
-  keyarray2 = ''
+  valarray1 = ''
   for key in event.keys():
     keyarray1 += (key+' ')
-
+  for val in event.values():
+    valarray1 += (val+' ')
   
   return {
       'statusCode': 200,
