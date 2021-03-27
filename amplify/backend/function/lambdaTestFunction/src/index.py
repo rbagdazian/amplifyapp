@@ -8,6 +8,8 @@ def handler(event, context):
   tv = '->' + jse.encode(tvd) + '<-'
   keyarray1 = ''
   keyarray2 = ''
+  for key in event.keys():
+    keyarray1 += (key+' ')
 
   
   return {
@@ -18,7 +20,7 @@ def handler(event, context):
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
       },
-      'body': json.dumps({'timev': 'ok to here', 'msg2': 'message2'})
+      'body': json.dumps({'timev': keyarray1, 'msg2': 'message2'})
   }
   
   
