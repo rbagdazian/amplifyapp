@@ -18,7 +18,7 @@
       "function": {
         "lambdaTestFunction": {
           "deploymentBucketName": "amplify-amplifye25657fcada84-staging-130520-deployment",
-          "s3Key": "amplify-builds/lambdaTestFunction-79387a4a4e584e776a32-build.zip"
+          "s3Key": "amplify-builds/lambdaTestFunction-306f452f444d33453252-build.zip"
         },
         "imgProcessFcn": {
           "deploymentBucketName": "amplify-amplifye25657fcada84-staging-130520-deployment",

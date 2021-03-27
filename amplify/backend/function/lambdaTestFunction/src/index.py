@@ -9,13 +9,11 @@ def handler(event, context):
   tvd = time.time()
   jse = json.JSONEncoder()
   tv = '->' + jse.encode(tvd) + '<-'
-  keyarray = '<p><br />'
+  keyarray = ''
   keys = event.keys()
   vals = event.values()
   for i in range(0,len(keys)):
-    keyarray = keyarray + '[ ' + keys[i] + ', ' + vals[i] +' ]<br>'
-  
-  keyarray = keyarray + '</p>'
+    keyarray = keyarray + ' [ ' + keys[i] + ', ' + vals[i] +' ] '
   
   return {
       'statusCode': 200,
