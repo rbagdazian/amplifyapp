@@ -11,7 +11,7 @@ def handler(event, context):
   for key in event.keys():
     keyarray1 += (key+' ')
   for key in event.keys():
-    valarray1 += (event[key]+' ')
+    valarray1 += (str(event[key])+' ')
   
   return {
       'statusCode': 200,
