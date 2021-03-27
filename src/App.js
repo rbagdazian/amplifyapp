@@ -14,8 +14,8 @@ function App() {
     //console.log('in fetch time')
     const timeData = await API.get('lambdaTestApi','/time')
     //console.log(timeData)
-    console.log(timeData.timev)
-    console.log(timeData.msg2)
+    console.log('t--->'+timeData.timev+'<---')
+    console.log('m--->'+timeData.msg2+'<---')
     setTimev(timeData.timev)
     setMsg2(timeData.msg2)
   }
