@@ -9,7 +9,8 @@ def handler(event, context):
   keyarray1 = ''
   valarray1 = ''
   for key in event.keys():
-    keyarray1 += (key+' : ') + (str(event[key])+'\n')
+    if(key.lower() == 'path'):
+      keyarray1 += (key+' : ') + (str(event[key])+'\n')
 
   return {
       'statusCode': 200,
