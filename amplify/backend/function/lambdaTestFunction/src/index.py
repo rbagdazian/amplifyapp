@@ -9,10 +9,8 @@ def handler(event, context):
   keyarray1 = ''
   valarray1 = ''
   for key in event.keys():
-    keyarray1 += (key+' ')
-  for key in event.keys():
-    valarray1 += (str(event[key])+' ')
-  
+    keyarray1 += (key+' : ') + (str(event[key])+'<br/>')
+
   return {
       'statusCode': 200,
       'headers': {
@@ -21,7 +19,7 @@ def handler(event, context):
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
       },
-      'body': json.dumps({'timev': keyarray1, 'msg2': valarray1})
+      'body': json.dumps({'timev': keyarray1, 'msg2': '--'})
   }
   
   
