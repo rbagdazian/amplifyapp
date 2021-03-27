@@ -3,9 +3,9 @@ import time
 
 
 def handler(event, context):
-  print('received event:')
-  print(event)
-  print("context is:",context)
+  #print('received event:')
+  #print(event)
+  #print("context is:",context)
   tvd = time.time()
   jse = json.JSONEncoder()
   tv = '->' + jse.encode(tvd) + '<-'
@@ -14,9 +14,9 @@ def handler(event, context):
   keys = event.keys()
   vals = event.values()
   for i in keys:
-    keyarray1 = keyarray1 + i + ' '
+    keyarray1 = keyarray1 + (i + ' ')
   for i in vals:
-    keyarray2 = keyarray2 + i + ' '
+    keyarray2 = keyarray2 + (i + ' ')
   
   return {
       'statusCode': 200,
