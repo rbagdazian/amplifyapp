@@ -28,8 +28,9 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h1>We now have Auth!</h1>
         <p>
-        <h4>The current time is: {path} </h4>
-        // <h4>message2 = {evkeys} </h4>
+        <h4>The current path is: {path} </h4>
+        <h4>message2</h4>
+        <ul>{evkeys}</ul>
         </p>
       </header>
       <AmplifySignOut />
