@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import './App.css';
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 import {API} from 'aws-amplify'
-
+import IdiomaticReactList from './listrend.js'
 
 function App() {
   const [path, setPath] = useState('');
@@ -31,7 +31,7 @@ function App() {
         <h4>The current path is: {path} </h4>
         <h4>message2</h4>
         <ul>
-        <li>{evkeys}</li>
+        {IdiomaticReactList(evkeys)}
         </ul>
         </p>
       </header>
